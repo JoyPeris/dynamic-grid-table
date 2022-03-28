@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container">TABLE</div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-2">
       <div
         class="card"
@@ -32,6 +32,44 @@
           </div>
         </div>
       </div>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col-2">
+      <div
+        class="card"
+        *ngFor="let obj of columnHeaders"
+        [ngStyle]="{ 'height.px': calculateHeight(columnHeaders.indexOf(obj)) }"
+      >
+        <div class="ribbon3">{{ obj }}</div>
+      </div>
+    </div>
+    <div class="col">
+      <table class="table  table-hover">
+        <thead >
+          <tr>  
+            <th scope="col" *ngFor="let i of categories"  >{{i}}</th>
+            <!-- <th scope="col">20lt</th>
+            <th scope="col">10ltr</th>
+            <th scope="col">50ltr</th> -->
+          </tr>
+          <tr>
+            <th scope="col">weight</th>
+            <th scope="col">0.9</th>
+            <th scope="col">0.8</th>
+            <th scope="col">0.1</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let obj of properties">
+          <tr *ngFor="let i of obj">
+            <th scope="row">{{ i.rowHeader }}</th>
+            <td>{{ i.item1 }}</td>
+            <td>{{ i.item2 }}</td>
+            <td>{{ i.item3 }}</td>
+          </tr>
+        </tbody>
+   
+      </table>
     </div>
   </div>
 </div>

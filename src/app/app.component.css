@@ -1,16 +1,16 @@
-.col,
-.col-2 {
-  width: 120px;
-  height: 32px;
-
+.col-2{
+  margin-top: 73px;
+  padding-right: 0%;
 }
-
-
+.col{
+  padding-left: 0%;
+}
 .c {
-  border: 0.5px solid gray;
+  border: 1px solid black;
 }
 .card{
-border:none;
+  border: 1px solid black;
+  border-radius: 0px;
 }
 
 .ribbon3 {
@@ -44,4 +44,9 @@ border:none;
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-left: 15px solid #59324c;
+}
+.tbody{
+  border:1 px solid black
+  
+  
 }

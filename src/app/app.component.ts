@@ -9,7 +9,7 @@ const jsondata = data;
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  
+  categories: Array<any> = ["Description","20ltr", "10ltr","30ltr"]
   columnHeaders: Array<any> = Object.keys(jsondata);
   height = 0
   arr: Array<any> = [];
@@ -39,7 +39,7 @@ export class AppComponent {
   ngOnInit(): void {
        
     this.columnHeaders.forEach((element: string) => {
-      this.height = Object.keys((jsondata as any)[element]).length * 40;
+      this.height = Object.keys((jsondata as any)[element]).length * 37;
       this.arr.push(this.height);
 
     });
